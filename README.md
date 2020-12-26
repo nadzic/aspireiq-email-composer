@@ -11,13 +11,13 @@
 yarn
 ```
 
-## Run project:
+## Run project
 
 ```
 yarn start
 ```
 
-## Run tests:
+## Run tests
 
 ```
 yarn test
