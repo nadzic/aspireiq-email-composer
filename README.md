@@ -27,7 +27,7 @@ yarn test
 
 - extend tests, add more tests jest, rtl;
 - add airbnb linter, prettier;
-- instead of png, use svg for the icons;
+- instead of png, use svg for the icons.
 
 ## UI/UX improvements
 
