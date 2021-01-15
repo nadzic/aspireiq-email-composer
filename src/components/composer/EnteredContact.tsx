@@ -3,11 +3,11 @@ import styled, { css } from 'styled-components';
 import CloseImage from '../../icons/close.png';
 import ErrorCircleImage from '../../icons/error-circle.png';
 
-interface ContainerProps {
+type ContainerProps = {
   error?: boolean;
 };
 
-interface EnteredContactProps {
+type EnteredContactProps = {
   error?: boolean;
   email: string;
   onClick: () => void;
@@ -54,8 +54,8 @@ const Container = styled.div<ContainerProps>`
   }
 
   ${({ error }) =>
-  error &&
-  css`
+    error &&
+    css`
     background: ${({ theme }) => theme.colors.lightRed};
 
     &:hover {
@@ -75,20 +75,20 @@ const EmailText = styled.div`
 `;
 
 const EnteredContact: FC<EnteredContactProps> = ({ email, error, onClick }): ReactElement =>
-  <Container {...{error}}>
+  <Container {...{ error }}>
     <EmailText>{email}</EmailText>
-      {error ?
-        <ErorrCircleImg
-          src={ErrorCircleImage}
-          alt="error"
-        /> :
-        <EmptyBox />
-      }
-      <CloseImg
-        src={CloseImage}
-        alt="close"
-        onClick={onClick}
-      />
+    {error ?
+      <ErorrCircleImg
+        src={ErrorCircleImage}
+        alt="error"
+      /> :
+      <EmptyBox />
+    }
+    <CloseImg
+      src={CloseImage}
+      alt="close"
+      onClick={onClick}
+    />
   </Container>
 
 export default EnteredContact;

@@ -8,12 +8,12 @@ import React, {
 import styled, { css } from 'styled-components';
 import emailsData from '../../data/emails.json';
 
-interface ContainerProps {
+type ContainerProps = {
   offset: number;
   visible: boolean;
 };
 
-interface AutoCompleteProps {
+type AutoCompleteProps = {
   offset: number;
   searchString: string;
   handleAddEmail: (email: string) => void;
@@ -33,8 +33,8 @@ const Container = styled.div<ContainerProps>`
   left: 20px;
 
   ${({ offset }) =>
-  offset &&
-  css`
+    offset &&
+    css`
     left: ${offset + 20}px;
   `}
 `;
@@ -87,7 +87,7 @@ const AutoComplete: FC<AutoCompleteProps> = ({ offset, handleAddEmail, searchStr
 
   return (
     <Container
-      {...{offset}}
+      {...{ offset }}
       visible={filteredEmails.length > 0}
       onMouseLeave={() => {
         setHoveredEmail('');

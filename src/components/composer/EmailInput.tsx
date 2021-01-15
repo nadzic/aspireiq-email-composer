@@ -11,7 +11,7 @@ import styled, { css } from 'styled-components';
 import { EnteredContact, AutoComplete } from './index';
 import { validateEmail } from '../../utils/validators';
 
-interface InputProps {
+type InputProps = {
   offset: number;
 };
 
@@ -38,7 +38,7 @@ const EmailsContainer = styled.div`
 const Input = styled.input.attrs({
   type: "email",
   placeholder: "Enter recipients..."
-})<InputProps>`
+}) <InputProps>`
   width: 400px;
   max-width: 400px;
   height: 49.47px;
@@ -50,8 +50,8 @@ const Input = styled.input.attrs({
   box-sizing: border-box;
 
   ${({ offset }) =>
-  offset &&
-  css`
+    offset &&
+    css`
     padding-left: ${offset + 12}px;
   `}
 `;
@@ -114,7 +114,7 @@ const EmailInput: FC = (): ReactElement => {
       >
         {emails.map((email, index) => (
           <EnteredContact
-            {...{email}}
+            {...{ email }}
             error={!validateEmail(email)}
             onClick={() => handleRemoveEmail(index)}
             key={index}
