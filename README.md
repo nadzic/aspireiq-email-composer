@@ -28,8 +28,6 @@ yarn test
 - extend tests, add more tests jest, rtl;
 - add airbnb linter, prettier;
 - instead of png, use svg for the icons;
-- later if you have more components, you can use storybook (I am using it for my projects) -- for isolated components development, and will add as well some kind of style guide and sharing components in cloud https://bit.dev or locally https://github.com/whitecolor/yalc;
-- later if you are planning to use full js/ts stack (CTO told me) I would highly recommend to use Nx https://nx.dev or Lerna https://github.com/lerna/lerna (monorepo management).
 
 ## UI/UX improvements
 
